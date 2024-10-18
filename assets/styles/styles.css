@@ -1,0 +1,165 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: #7CB9E8;
+    padding: 0;
+    margin: 0;
+}
+
+#displayArea{
+    width : 100%;
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 1%;
+}
+
+#header{
+    width : 100vw;
+    text-align: center;
+    padding-top: 2em;
+    padding-bottom: 1em;
+}
+
+#header h1{
+    color : white;
+    font-size: 2.5em;
+    text-shadow:
+    -1px -1px 0 black,  
+    1px -1px 0 black,   
+    -1px 1px 0 black,   
+    1px 1px 0 black;   
+}
+
+#innerHeader{
+    padding-top: 0.5em;
+    font-size: 1.4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#innerHeader input{
+    width : 80%;
+    padding-left: 1em;
+    height: 1.8em;
+    margin-left: 1em;
+    margin-right: 1em;
+    border-radius: 1em;
+    border : 0.1em solid black;
+    font-size: 0.7em;
+}
+
+#innerHeader button{
+    width: 85%;
+    height : 2.5em;
+    font-weight: bold;
+    background-color: white;
+    /* border: 0.1px solid black; */
+    margin-top : 1em;
+    border-radius: 5em;
+}
+
+#toDoTask, #inProgressTask, #completedTask{
+    width : 90%;
+    
+    height : 100%;
+    background-color: bisque;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 2em;
+    padding-bottom: 2em ;
+}
+
+#displayArea h2{
+    box-sizing: border-box;
+    width : 100%;
+    text-align: center;
+    padding: 3% 5% 3% 5%;
+    border : 0.1em solid black;
+    border-radius: 0.7em;
+    margin : 0;
+}
+
+#clearCompleted{
+    height : 2.8em;
+    width : 40%;
+    margin-left: 30%;
+    margin-top: 0em;
+    font-weight: bold;
+    background-color: white;
+    border-radius: 5em;
+}
+
+.listItem{
+    display: flex;
+    width : 70%;
+    justify-content: space-between;
+    align-items: center;
+    height: 2em;
+    position: relative;
+    margin-top: 1em;
+    background-color: white;
+    border: 0.05em black solid;
+    border-radius: 5em;
+}
+
+.listText{
+   
+    font-size: 1.3em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.listButton{
+    height: 80%;
+    width : 4em;
+    margin-right: 1em;
+    border-radius: 5em;
+    margin-left: 1em;
+    font-size: 1.2em;
+}
+
+#todoList , #progressList, #completedList{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media(min-width: 768px)
+{
+    #displayArea {
+        flex-direction: row; /* Revert to row layout */
+    }
+
+    #toDoTask, #inProgressTask, #completedTask {
+        width: 27%; /* Restore original width */
+        padding: 0;
+        height: 70vh;
+    }
+
+    #innerHeader {
+        flex-direction: row;
+    }
+
+    #innerHeader input {
+        width: 30%;
+    }
+
+    #innerHeader button {
+        width: 8%;
+        margin-top: 0;
+    }
+}
